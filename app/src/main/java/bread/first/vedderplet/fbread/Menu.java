@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.content.Intent;
 
+// Clean & rebuild for symbols. Quite annoying
+
 public class Menu extends AppCompatActivity {
 
     @Override
