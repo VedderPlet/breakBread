@@ -67,7 +67,7 @@ public class ProfileSettings extends AppCompatActivity {
 
 
 
-        //make a ton of these.... You could make an array though to iterate cb but yeah just do whatever.
+        //Make this much cleaner before Demo
         boolean isChecked = getBooleanFromPreferences("isChecked");
         Log.i("start",""+isChecked);
         none.setChecked(isChecked);
