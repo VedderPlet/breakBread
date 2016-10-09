@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="bread.first.vedderplet.fbread.ProfileSettings"
+    tools:showIn="@layout/activity_profile_settings"
+    android:background="#dbb67f"
+    android:id="@+id/aking">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:text="BreakBread"
+        android:id="@+id/breakBreadText"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Active"
+        android:id="@+id/searchSwitch"
+        android:checked="false"
+        android:layout_alignParentRight="true"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Settings"
+        android:id="@+id/settingsText"
+        android:layout_below="@+id/breakBreadText"
+        android:layout_centerHorizontal="true" />
+
+
+    <com.facebook.login.widget.ProfilePictureView
+        android:layout_toStartOf="@+id/ageTView"
+        android:layout_toLeftOf="@+id/ageTView"
+        android:layout_above="@+id/scrollCook"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/settingsText"
+        android:id="@+id/profileUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Age"
+        android:id="@+id/ageTView"
+        android:textIsSelectable="false"
+        android:textSize="25dp"
+        android:layout_alignTop="@+id/profileUser"
+        android:layout_toLeftOf="@+id/searchSwitch"
+        android:layout_toStartOf="@+id/searchSwitch" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editAge"
+        android:layout_alignTop="@+id/ageTView"
+        android:layout_toRightOf="@+id/ageTView"
+        android:layout_toEndOf="@+id/ageTView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Sex"
+        android:id="@+id/sextView2"
+        android:textSize="25dp"
+        android:layout_alignBottom="@+id/sexSpinner"
+        android:layout_alignLeft="@+id/ageTView"
+        android:layout_alignStart="@+id/ageTView"
+        android:layout_alignBaseline="@id/sexSpinner"/>
+
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sexSpinner"
+        android:spinnerMode="dialog"
+        android:layout_below="@+id/editAge"
+        android:layout_toRightOf="@+id/sextView2"
+        android:layout_toEndOf="@+id/sextView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:id= "@+id/nameView"
+        android:textSize="25dp"
+
+
+        android:layout_below="@+id/sextView2"
+        android:layout_toLeftOf="@+id/saveButton"
+        android:layout_toStartOf="@+id/saveButton" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollCook"
+        android:layout_above="@+id/scrollAllergies"
+        >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hosting"
+                android:id="@+id/checkHost"
+                android:checked="false"
+                android:textSize="35dp"
+                />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cook Together"
+                android:id="@+id/duoCook"
+                android:checked="false"
+                android:textSize="35dp"
+                android:nestedScrollingEnabled="false" />
+
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cooking"
+                android:id="@+id/checkCook"
+                android:checked="false"
+                android:textSize="35dp"
+                android:nestedScrollingEnabled="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free Meals"
+                android:id="@+id/checkFree"
+                android:checked="false"
+                android:textSize="35dp"
+                />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scrollView"
+        android:id="@+id/scrollAllergies">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Allergies:"
+                android:id="@+id/textAllergies"
+                android:textIsSelectable="false"
+                android:textSize="30dp"
+                />
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="None"
+                android:id="@+id/noneCheck"
+                android:checked="false"
+                android:textSize="25dp"
+                android:nestedScrollingEnabled="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other"
+                android:id="@+id/otherCheck"
+                android:checked="false"
+                android:textSize="25dp"
+                android:nestedScrollingEnabled="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Milk"
+                android:id="@+id/milkCheck"
+                android:checked="false"
+                android:textSize="25dp"
+                android:nestedScrollingEnabled="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eggs"
+                android:id="@+id/eggsCheck"
+                android:checked="false"
+                android:textSize="25dp"
+                android:nestedScrollingEnabled="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Peanuts"
+                android:id="@+id/peanutsCheck"
+                android:checked="false"
+                android:textSize="25dp"
+                android:nestedScrollingEnabled="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tree Nuts"
+                android:id="@+id/treeNutsCheck"
+                android:checked="false"
+                android:textSize="25dp"
+                android:nestedScrollingEnabled="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Soy"
+                android:id="@+id/soyCheck"
+                android:checked="false"
+                android:textSize="25dp"
+                android:nestedScrollingEnabled="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wheat/Gluten/Barley/Rye/Oats"
+                android:id="@+id/wgbroCheck"
+                android:checked="false"
+                android:textSize="25dp"
+                android:nestedScrollingEnabled="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fish"
+                android:id="@+id/fishCheck"
+                android:checked="false"
+                android:textSize="25dp"
+                android:nestedScrollingEnabled="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shellfish"
+                android:id="@+id/shellfishCheck"
+                android:checked="false"
+                android:textSize="25dp"
+                android:nestedScrollingEnabled="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pet Dander"
+                android:id="@+id/petDander"
+                android:checked="false"
+                android:textSize="25dp"
+                android:nestedScrollingEnabled="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perfume/Cologne"
+                android:id="@+id/pfCheck"
+                android:checked="false"
+                android:textSize="25dp"
+                android:nestedScrollingEnabled="false" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dust"
+                android:id="@+id/dustCheck"
+                android:checked="false"
+                android:textSize="25dp"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_above="@id/backButton"
+        android:id="@+id/scrollView"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35dp"
+                android:text="Profile"
+                android:id="@+id/profileText"
+
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/openerText"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diet"
+                android:id="@+id/textView"
+                android:textSize="35dp"
+                android:layout_below="@+id/openerText"
+                />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/diet"
+                android:layout_below="@+id/openerText"
+                android:spinnerMode="dialog"
+                android:touchscreenBlocksFocus="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seats "
+                android:id="@+id/textAvailable"
+                android:layout_below="@+id/diet"
+                android:textSize="35dp" />
+
+
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guest"
+                android:spinnerMode="dialog" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Dress"
+                android:id="@+id/dressView"
+                android:textSize="35dp"
+                />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dressSpinner"
+                android:spinnerMode="dialog"
+                />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/backButton"
+        android:onClick="back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/saveButton"
+        android:onClick="saveInfo"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Display"
+        android:id="@+id/displayData"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="displayData" />
+
+
+</RelativeLayout>
